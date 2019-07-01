@@ -1,22 +1,44 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="main.css">
-
-    <title>Devin's Baked</title>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <title>Devins Baked</title>
+    <style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  }
+  </style>
   </head>
-  <body>
-    <button id="btn" onclick="requestAPI()">Cookies</button>
-    <button1 id="bttn" onclick="requestAPI()">Cake</button1>
-    <nav>
+
+<div class="topnav" id="myTopnav">
 <a href="/">Home</a>
-<a href="about">About</a>
-<a href="location">Locations</a>
-<a href="contact">Contact</a>
-<a href="socialmedia">SocialMedia</a>
-    </nav>
+<a href="cookies">Cookies</a>
+<a href="cakes">Cakes</a>
+<a href="cakepops">Cake Pops</a>
+<a href="muffins">Muffins</a>
+<a href="events">Events</a>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+   <i class="fa fa-bars"></i>
+ </a>
+</div>
+
+<body>
       <%= yield %>
     </body>
+    <footer>
+<li><a href="https://twitter.com/?lang=en"></a></li>
+    </footer>
   <script src="main.js" charset="utf-8"></script>
 </html>

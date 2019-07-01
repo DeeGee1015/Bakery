@@ -2,28 +2,40 @@ require "sinatra"
 require "httparty"
 
 app_key = "3K5QBXIEKDZFYAMKJR"
-req = HTTParty.get("https://www.eventbriteapi.com/v3/bakery/search?token=#{app_key}")
-data = JSON.parse(req.to_json)
+req = HTTParty.get("https://www.eventbrite.com/d/ny--new-york/food-and-drink--events/bakery/?page=1=#{app_key}")
+
 
 get "/" do
   erb :home
 end
 
-get "/about" do
-  erb :about
+get "/cookies" do
+  erb :cookies
 end
 
-get "/location" do
-  erb :location
+get "/cakes" do
+  erb :cakes
 end
 
-get "/contact" do
-  erb :contact
+get "/muffins" do
+  erb :muffins
 end
 
-get "/socialmedia" do
-  erb :socialmedia
+get "/cakepops" do
+  erb :cakepops
 end
+
+get "/events" do
+  def getevents
+    @events =
+    if @events == nil
+      @events == "Events Not Found"
+    end
+  end
+    getevents()
+  erb :events
+end
+
 
 get "/results" do
   def getresults
